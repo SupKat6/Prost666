@@ -1,0 +1,19 @@
+﻿<Window x:Class="WashingHouseChetvernyaDemo.AddEmloyeeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WashingHouseChetvernyaDemo"
+        mc:Ignorable="d"
+        Title="AddEmloyeeWindow" Height="450" Width="800">
+    <Grid>
+        <Label Content="Добавление сотрудника" HorizontalAlignment="Left" Margin="325,57,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="31" Margin="309,104,0,0" TextWrapping="Wrap" Text="Фамилия" VerticalAlignment="Top" Width="178"/>
+        <TextBox HorizontalAlignment="Left" Height="31" Margin="309,144,0,0" TextWrapping="Wrap" Text="Имя" VerticalAlignment="Top" Width="178"/>
+        <TextBox HorizontalAlignment="Left" Height="31" Margin="309,191,0,0" TextWrapping="Wrap" Text="Отчество" VerticalAlignment="Top" Width="178"/>
+        <TextBox HorizontalAlignment="Left" Height="31" Margin="308,238,0,0" TextWrapping="Wrap" Text="Логин" VerticalAlignment="Top" Width="181"/>
+        <PasswordBox HorizontalAlignment="Left" Margin="309,286,0,0" VerticalAlignment="Top" Width="179" Height="32"/>
+        <CheckBox Content="Добавить с ролью &quot;Администратор&quot;" HorizontalAlignment="Left" Margin="295,339,0,0" VerticalAlignment="Top"/>
+        <Button Content="Добавить нового участника" HorizontalAlignment="Left" Margin="305,369,0,0" VerticalAlignment="Top" Width="185" Height="30"/>
+    </Grid>
+</Window>

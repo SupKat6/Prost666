@@ -1,0 +1,64 @@
+﻿<Window x:Class="WashingHouseChetvernyaDemo.EmloyeeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WashingHouseChetvernyaDemo"
+        mc:Ignorable="d"
+        Title="EmloyeeWindow" Height="450" Width="800">
+    <Grid>
+        <TabControl HorizontalAlignment="Left" Height="327" Margin="10,69,0,0" VerticalAlignment="Top" Width="764">
+            <TabItem Header="Активные стирки">
+                <Grid>
+                    <DataGrid Grid.Row="1" x:Name="DGWash" AutoGenerateColumns="False">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="№" Width="*" Binding="{Binding Wash.idWash}">
+                            </DataGridTextColumn>
+                            <DataGridTextColumn Header="Номер стиральной машины" Width="*" Binding="{Binding Machine.idMachine}">
+                            </DataGridTextColumn>
+                            <DataGridTextColumn Header="Порошок" Width="*" Binding="{Binding Powder.Title}">
+                            </DataGridTextColumn>
+                            <DataGridTextColumn Header="Сотрудник" Width="*" Binding="{Binding Staff.idStaff}">
+                            </DataGridTextColumn>
+                            <DataGridTextColumn Header="Статус" Width="*" Binding="{Binding StatusWash.idStatusWash}">
+                            </DataGridTextColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Завершённые стирки">
+                <Grid>
+                    <DataGrid Grid.Row="1" x:Name="DGWashed" AutoGenerateColumns="False">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="№" Width="*" Binding="{Binding Wash.idWash}">
+                            </DataGridTextColumn>
+                            <DataGridTextColumn Header="№ стиральной машины" Width="*" Binding="{Binding Machine.idMachine}">
+                            </DataGridTextColumn>
+                            <DataGridTextColumn Header="Порошок" Width="*" Binding="{Binding Powder.Title}">
+                            </DataGridTextColumn>
+                            <DataGridTextColumn Header="Сушка" Width="*">
+                            </DataGridTextColumn>
+                            <DataGridTextColumn Header="Сотрудник" Width="*" Binding="{Binding Staff.idStuff}">
+                            </DataGridTextColumn>
+                            <DataGridTextColumn Header="Статус" Width="*" Binding="{Binding StatusWash.idStatusWash}">
+                            </DataGridTextColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Кассовый отчёт">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="183*"/>
+                        <ColumnDefinition Width="575*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox HorizontalAlignment="Left" Height="95" Margin="39,33,0,0" TextWrapping="Wrap" Text="Количество стирок за смену" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged"/>
+                    <TextBox HorizontalAlignment="Left" Height="95" Margin="134.58,38,0,0" TextWrapping="Wrap" Text="Сумма наличного расчёта" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+                    <TextBox HorizontalAlignment="Left" Height="95" Margin="411.58,39,0,0" TextWrapping="Wrap" Text="Сумма безналичного расчёта" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+                    <Button Content="Сохранить отчёт" HorizontalAlignment="Left" Margin="126.58,226,0,0" VerticalAlignment="Top" Width="137" Grid.Column="1"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+        <Button Content="Добавить стирку" HorizontalAlignment="Left" Margin="588,30,0,0" VerticalAlignment="Top" Width="154" Click="Button_Click"/>
+    </Grid>
+</Window>
